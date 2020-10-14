@@ -12,7 +12,7 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 TEN_MINUTES_IN_SECONDS = 600
-BASE_AMOUNT = 20000
+BASE_AMOUNT = int(os.getenv("BASE_AMOUNT"))
 
 CREATOR_NAME = os.getenv("CREATOR_NAME")
 PAGE_URL = os.getenv("PAGE_URL")
@@ -54,7 +54,13 @@ def process_data():
 
     supporters.append(supporter)
 
-  latest_supporter_id = db["trakteer:latest_supporter_id"]
+  latest_supporter_id = ""
+
+  try:
+    latest_supporter_id = db["trakteer:latest_supporter_id"]
+  except:
+    pass
+
   get_last_index=[i for i, _ in enumerate(supporters) if _['id'] == latest_supporter_id][0]
 
   # if get_last_index is not 0, it means we have new n supporter(s)
