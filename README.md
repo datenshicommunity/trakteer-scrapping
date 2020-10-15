@@ -44,6 +44,37 @@ Tentu saja klo notif ke email pasti ada
 
 https://trakteer-scrapping.faultable.repl.co
 
+## Usage
+
+- Fork project ini di [repl.it](https://repl.it/@faultable/trakteer-scrapping)
+- Ubah URL yang ada [disini](https://github.com/faultable/trakteer-scrapping/blob/master/.github/workflows/cek.yml) dengan URL project repl.it kamu
+- Buat berkas .env (silahkan lihat berkas .env.example), lalu isi dengan format seperti ini (sebagai contoh)
+  - `DISCORD_WEBHOOK=<discord_webhook>`, [pelajari disini](https://evlfctry.pro/o0101bsrc)
+  - `CREATOR_NAME=<nama_creator>`, misal: `evilfactorylabs` atau `Fariz yang kamu kenal`, case-sensitive untuk sekarang
+  - `PAGE_URL=<url_trakteer>`, misal: https://trakteer.id/evilfactorylabs
+  - `BASE_AMOUNT=<unit traktrian>`, misal: di [evilfactorylabs](https://trakteer.id/evilfactorylabs) itu 20,000 (untuk bir), jadi isinya `20000`
+- Push ke GitHub kamu project yang ada di repl.it tersebut
+- Selesai!
+
+Contoh lengkap dari berkas `.env`:
+
+```
+DISCORD_WEBHOOK=https://discord.com/api/webhooks/66631336696969/elb1cn1fn1
+CREATOR_NAME=evilfactorylabs
+PAGE_URL=https://trakteer.id/evilfactorylabs
+BASE_AMOUNT=20000
+```
+
+Tangkapan layar untuk *log* ketika ada yang traktiran baru:
+
+![Tangkapan layar untuk *log* ketika ada yang traktiran baru](https://s3.edgyfn.app/faultable/misc/Screen%20Shot%202020-10-15%20at%2010.09.42%20PM.png)
+
+Dan ini di Discord nya:
+
+![Tangkapan layar notifikasi di Discord](https://s3.edgyfn.app/faultable/misc/Screen%20Shot%202020-10-15%20at%2010.11.05%20PM.png)
+
+Jika memiliki kendala, jangan sungkan untuk [kontak saya](https://faultable.dev/dm)
+
 ## Development
 
 I don't know like you know I just use repl.it because I'm boring
